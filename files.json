@@ -1,0 +1,34 @@
+{
+  "Bayonet-Linux-amd64.deb": {
+    "version": "0.1.43",
+    "platform": "linux"
+  },
+  "Bayonet-Linux-x86_64.rpm": {
+    "version": "0.1.43",
+    "platform": "linux"
+  },
+  "Bayonet-Windows-Setup.exe": {
+    "version": "0.1.43",
+    "platform": "windows"
+  },
+  "Bayonet-Windows.msi": {
+    "version": "0.1.43",
+    "platform": "windows"
+  },
+  "Bayonet-macOS-AppleSilicon.app.tar.gz": {
+    "version": "0.1.44",
+    "platform": "macos"
+  },
+  "Bayonet-macOS-AppleSilicon.dmg": {
+    "version": "0.1.44",
+    "platform": "macos"
+  },
+  "Bayonet-macOS-Intel.app.tar.gz": {
+    "version": "0.1.44",
+    "platform": "macos"
+  },
+  "Bayonet-macOS-Intel.dmg": {
+    "version": "0.1.44",
+    "platform": "macos"
+  }
+}

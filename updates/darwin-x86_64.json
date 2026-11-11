@@ -1,0 +1,15 @@
+{
+  "version": "0.1.44",
+  "notes": "- **Update many NuGet packages at once:** after **Check for Updates**, the NuGet window shows **Update All** with the number of packages that have updates. Tick the ones you want to see **Update Selected** instead; the box in the header ticks or clears them all.\n- **Package feeds:** the NuGet window's feed picker searches all enabled feeds or just one. **Manage Feeds** adds, edits, enables, disables and removes package sources, in your user settings or in the solution's `nuget.config`, the same way `dotnet nuget` does.\n- **Open a solution or project:** **Open…** on the welcome screen and in the File menu now accepts a `.sln`, `.slnx` or `.csproj` as well as a folder. A solution opens its folder with that solution chosen; a project file inside an open solution opens in the editor.\n\nmacOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose **Open**.",
+  "pub_date": "2026-11-11T20:07:06Z",
+  "platforms": {
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0pqb0FuMzdEdXo2RmpQVTJRYklXcW1lb0hMaEQra3BxTEZqbzNhNUJIdFNrL1N6RzUwUFNlUERrOUUrY1FkOEhaOWVyQzIvOGtLbXRpR2Y2cmlIMlFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDI3NjExCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ0ClI5YXowa0xQS2hMVXVkYzR5Z01odmFQamJFU050bHB2NGQySlRQTGljemZJcnFDTHR2TENFblBObUpjRU90SHZjbjh2SEZxMEhZRkFGRllOS0NXeEFBPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-Intel.app.tar.gz"
+    },
+    "darwin-x86_64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0pqb0FuMzdEdXo2RmpQVTJRYklXcW1lb0hMaEQra3BxTEZqbzNhNUJIdFNrL1N6RzUwUFNlUERrOUUrY1FkOEhaOWVyQzIvOGtLbXRpR2Y2cmlIMlFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDI3NjExCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ0ClI5YXowa0xQS2hMVXVkYzR5Z01odmFQamJFU050bHB2NGQySlRQTGljemZJcnFDTHR2TENFblBObUpjRU90SHZjbjh2SEZxMEhZRkFGRllOS0NXeEFBPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-Intel.app.tar.gz"
+    }
+  }
+}

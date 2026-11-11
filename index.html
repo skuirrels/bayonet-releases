@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayonet · Download</title>
+<meta name="description" content="Bayonet 0.1.44: An open-source .NET IDE. Installers for Windows, macOS and Linux.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #f5f7fb; --panel: #ffffff; --text: #18202f; --muted: #5d6779; --border: #dde3ec;
+    --accent: #6e3fd6; --accent-2: color-mix(in srgb, #6e3fd6 10%, #fff); --glow: color-mix(in srgb, #6e3fd6 18%, transparent);
+    --shadow: 0 10px 30px rgba(20, 40, 80, .08);
+    --amber: #f59e0b; --teal: #14b8a6; --pink: #ec4899; --blue: #3b82f6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c111a; --panel: #141b27; --text: #e6eaf1; --muted: #98a3b6; --border: #253043;
+      --accent: #a084f0; --accent-2: color-mix(in srgb, #a084f0 14%, #141b27); --glow: color-mix(in srgb, #a084f0 22%, transparent);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+      --amber: #fbbf24; --teal: #2dd4bf; --pink: #f472b6; --blue: #60a5fa;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  a { color: var(--accent); }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  .hero { position: relative; overflow: hidden; padding: 72px 0 48px; text-align: center;
+          background: radial-gradient(800px 320px at 50% -60px, var(--glow), transparent 70%); }
+  .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+          background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+          background-size: 44px 44px; mask-image: radial-gradient(600px 260px at 50% 0, #000, transparent 75%);
+          -webkit-mask-image: radial-gradient(600px 260px at 50% 0, #000, transparent 75%); }
+  .hero .wrap { position: relative; }
+  .hero img { width: 104px; height: 104px; filter: drop-shadow(0 10px 24px var(--glow)); animation: float 6s ease-in-out infinite; }
+  @keyframes float { 50% { transform: translateY(-6px); } }
+  @media (prefers-reduced-motion: reduce) { .hero img { animation: none; } }
+  h1 { font-size: clamp(2.4rem, 6vw, 3.4rem); margin: 14px 0 6px; letter-spacing: -.03em; }
+  .tagline { font-size: 1.2rem; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .cta { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; padding: 14px 34px; border-radius: 12px;
+         background: #6e3fd6; color: #fff; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+         box-shadow: 0 8px 24px var(--glow); transition: transform .15s, filter .15s; }
+  .cta small { font-weight: 400; opacity: .85; font-size: .82rem; }
+  .cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
+  .version { margin-top: 16px; color: var(--muted); font-size: .9rem; }
+  .other { margin-top: 6px; font-size: .9rem; }
+  section { padding: 34px 0; }
+  h2 { font-size: 1.5rem; margin: 0 0 18px; letter-spacing: -.01em; }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); align-items: start; }
+  .card { position: relative; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+  .card.mine { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow), var(--shadow); }
+  .card header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .card header svg { width: 34px; height: 34px; fill: var(--text); flex: none; }
+  .card h3 { margin: 0; font-size: 1.2rem; }
+  .card header p { margin: 0; color: var(--muted); font-size: .85rem; }
+  .badge { display: none; position: absolute; top: -11px; right: 14px; font-size: .72rem; font-weight: 600; color: #fff;
+           background: var(--accent); border-radius: 20px; padding: 3px 10px; white-space: nowrap; }
+  .card.mine .badge { display: inline-block; }
+  .files { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .dl { position: relative; display: flex; flex-direction: column; padding: 11px 44px 11px 14px; border: 1px solid var(--border); border-radius: 10px;
+        text-decoration: none; color: var(--text); background: var(--bg); transition: border-color .15s, transform .15s; }
+  .dl:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .dl.primary { border-color: var(--accent); background: var(--accent-2); }
+  .dl .name { font-weight: 600; }
+  .dl .meta { font-size: .82rem; color: var(--muted); }
+  .dl .arrow { position: absolute; right: 14px; top: 50%; width: 18px; height: 18px; margin-top: -9px; fill: none;
+               stroke: var(--muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .dl:hover .arrow { stroke: var(--accent); }
+  details { margin: 4px 2px 0; font-size: .75rem; color: var(--muted); }
+  summary { cursor: pointer; }
+  details code { display: block; word-break: break-all; font-size: .72rem; }
+  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .feature { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; border-top: 3px solid var(--tone); }
+  .feature.amber { --tone: var(--amber); } .feature.teal { --tone: var(--teal); }
+  .feature.pink { --tone: var(--pink); } .feature.blue { --tone: var(--blue); }
+  .feature b { display: block; margin-bottom: 4px; }
+  .feature span { color: var(--muted); font-size: .92rem; }
+  .extras { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); list-style: none; margin: 0; padding: 0; }
+  .help { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+  .help div, .notes { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; font-size: .92rem; min-width: 0; }
+  .notes { padding: 6px 20px; font-size: 1rem; }
+  .notes h4 { margin: 16px 0 6px; }
+  .notes h4 .date { font-weight: 400; color: var(--muted); font-size: .85rem; margin-left: 6px; }
+  .notes ul { margin: 0 0 8px; padding-left: 20px; }
+  .notes li { margin: 3px 0; }
+  .help h3 { margin: 0 0 6px; font-size: 1rem; }
+  pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; overflow-x: auto; font-size: .8rem; }
+  .update { display: flex; gap: 14px; align-items: center; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; }
+  .update svg { width: 28px; height: 28px; flex: none; fill: none; stroke: var(--teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  footer { padding: 34px 0 50px; color: var(--muted); font-size: .85rem; text-align: center; }
+  @media (max-width: 520px) { .hero { padding-top: 44px; } .wrap { padding: 0 16px; } }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="wrap">
+      <img src="icon.svg" alt="">
+      <h1>Bayonet</h1>
+      <p class="tagline">An open-source IDE for C#, F# and the rest of .NET. Roslyn code intelligence, solution-wide refactorings, NuGet, unit tests and a debugger, in a fast native app.</p>
+      <a class="cta" id="cta" href="#downloads">Download Bayonet <small id="cta-sub">Windows · macOS · Linux</small></a>
+      <div class="version">Version 0.1.44 · 11 November 2026 · free and open source (Apache-2.0)</div>
+      <div class="other"><a href="#downloads">All downloads</a> · <a href="SHA256SUMS.txt">Checksums</a></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <div class="grid">
+      <article class="card" id="windows">
+        <span class="badge">Recommended for you</span>
+        <header>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7H3zM11.6 4.3 21 3v8.5h-9.4zm0 15.4L21 21v-8.4h-9.4z"/></svg>
+          <div><h3>Windows</h3><p>Windows 10 and 11, 64-bit</p></div>
+        </header>
+        <ul class="files">
+          <li>
+            <a class="dl primary" href="Bayonet-Windows-Setup.exe" download data-arch="">
+              <span class="name">Windows installer</span>
+              <span class="meta">64-bit · .exe · version 0.1.43 · 46.4 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>77e18b8d87b3f3d7569cc505fa7186a279c369d1ca22cea7973c5169b1135cfe</code></details>
+          </li>
+          <li>
+            <a class="dl" href="Bayonet-Windows.msi" download data-arch="">
+              <span class="name">Windows MSI package</span>
+              <span class="meta">64-bit · .msi · for managed deployment · version 0.1.43 · 62.0 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>2006fd8842e76b534d1a640e4538bd0b7f972cf90006b4a499163448d4179540</code></details>
+          </li>
+        </ul>
+      </article>
+      <article class="card" id="macos">
+        <span class="badge">Recommended for you</span>
+        <header>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9C6.1 7 4.5 8 3.6 9.6c-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.3.8 2.2-1.3 3-2.5c1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.4zM13.9 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
+          <div><h3>macOS</h3><p>macOS 11.0 or newer</p></div>
+        </header>
+        <ul class="files">
+          <li>
+            <a class="dl primary" href="Bayonet-macOS-AppleSilicon.dmg" download data-arch="arm">
+              <span class="name">Apple Silicon</span>
+              <span class="meta">M1 and later · .dmg · 55.8 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>3fa2b8ac952f5147ee9929afd28bb11388fcea478e3bc14c8110ab4982cf48ce</code></details>
+          </li>
+          <li>
+            <a class="dl" href="Bayonet-macOS-Intel.dmg" download data-arch="x86">
+              <span class="name">Intel</span>
+              <span class="meta">Older Macs · .dmg · 61.0 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>362318cc2300f475bb560ff2c622c8d2dc1244775d6ff3e0340c85dbf91bcc20</code></details>
+          </li>
+        </ul>
+      </article>
+      <article class="card" id="linux">
+        <span class="badge">Recommended for you</span>
+        <header>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-2.2 0-3.6 1.8-3.6 4.4 0 1.5.3 2.4-.6 3.7C6.6 11.8 5 13.9 5 16.4c0 .7.1 1.3.4 1.8-.8.4-1.9.6-1.9 1.6 0 1.3 1.9 1.1 3.3 1.7 1.2.5 2.2.5 2.8-.3.8.2 1.6.3 2.4.3s1.6-.1 2.4-.3c.6.8 1.6.8 2.8.3 1.4-.6 3.3-.4 3.3-1.7 0-1-1.1-1.2-1.9-1.6.3-.5.4-1.1.4-1.8 0-2.5-1.6-4.6-2.8-6.3-.9-1.3-.6-2.2-.6-3.7C15.6 3.8 14.2 2 12 2zm-1.6 4.3c.5 0 .8.6.8 1.2 0 .3-.1.6-.2.8l-.4-.1c.1-.2.1-.4.1-.6 0-.4-.2-.7-.4-.7s-.4.3-.4.7v.2l-.4-.2v-.1c0-.7.4-1.2.9-1.2zm3.1 0c.6 0 1 .5 1 1.2 0 .2 0 .3-.1.5l-.3.1v-.4c0-.5-.3-.8-.6-.8s-.5.4-.5.8c0 .2 0 .4.1.5l-.5.2c-.1-.2-.2-.5-.2-.8 0-.7.5-1.3 1.1-1.3zM12 9.1c.9 0 2.3.6 2.3 1s-1.3 1.2-2.3 1.2-2.3-.8-2.3-1.2 1.4-1 2.3-1zm-3.1 3.5c.5 1.6 1.6 3 3.1 3s2.6-1.4 3.1-3c.8 1 1.6 2.5 1.6 3.9 0 2.4-2.1 3.4-4.7 3.4s-4.7-1-4.7-3.4c0-1.4.8-2.9 1.6-3.9z"/></svg>
+          <div><h3>Linux</h3><p>x86-64 · Ubuntu 22.04 or newer, Debian, Fedora, …</p></div>
+        </header>
+        <ul class="files">
+          <li>
+            <a class="dl primary" href="Bayonet-Linux-amd64.deb" download data-arch="">
+              <span class="name">Debian / Ubuntu</span>
+              <span class="meta">.deb package · version 0.1.43 · 62.6 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>05286558403b402a6571c35a826988fc0877ddc6edadf74bc1ca2a089c1539ae</code></details>
+          </li>
+          <li>
+            <a class="dl" href="Bayonet-Linux-x86_64.rpm" download data-arch="">
+              <span class="name">Fedora / RHEL / openSUSE</span>
+              <span class="meta">.rpm package · version 0.1.43 · 62.6 MB</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            </a>
+            <details><summary>SHA-256</summary><code>e58dea26627a005a7331d25ea08a67310b02268a4c8ef850c30dfa1fe6ee3b0d</code></details>
+          </li>
+        </ul>
+      </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="update">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2M3 12a9 9 0 0 1 15.5-6.2M18.5 2v3.8h-3.8M5.5 22v-3.8h3.8"/></svg>
+        <div><b>Installed copies update themselves.</b> Bayonet checks for a newer version when it starts, and Help ▸ Check for Updates checks on demand.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What you get</h2>
+      <div class="features">
+        <div class="feature amber"><b>Solutions and projects</b><span>Opens .sln, .slnx and .slnf files, with solution folders, dependencies and central package management.</span></div>
+        <div class="feature teal"><b>Roslyn code intelligence</b><span>Completion, navigation, find usages, inlay hints and analyser diagnostics as you type.</span></div>
+        <div class="feature pink"><b>Refactorings</b><span>Rename, extract, inline, change signature and move type to file across the solution.</span></div>
+        <div class="feature blue"><b>NuGet</b><span>Search feeds, install, update and remove packages per project or solution, including private feeds.</span></div>
+        <div class="feature amber"><b>Unit tests</b><span>Discover, run and debug xUnit, NUnit and MSTest tests, with results in a tree.</span></div>
+        <div class="feature teal"><b>Debugger</b><span>Breakpoints, stepping, watches and attach to process, with netcoredbg.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Install notes</h2>
+      <div class="help">
+        <div><h3>Windows</h3>Run the installer. If SmartScreen says “Windows protected your PC”, choose <b>More info → Run anyway</b> (the build is not code-signed yet). The .msi suits managed installs.</div>
+        <div><h3>macOS</h3>Open the .dmg and drag Bayonet to Applications. The first time, <b>right-click the app → Open</b> (the build is not notarized yet).</div>
+        <div><h3>Linux</h3>Make the AppImage executable and run it, or install the package for your distribution.
+          <pre>sudo apt install ./Bayonet-Linux-amd64.deb
+sudo dnf install ./Bayonet-Linux-x86_64.rpm</pre></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What's new in 0.1.44</h2>
+      <div class="notes"><ul>
+<li><strong>Update many NuGet packages at once:</strong> after <strong>Check for Updates</strong>, the NuGet window shows <strong>Update All</strong> with the number of packages that have updates. Tick the ones you want to see <strong>Update Selected</strong> instead; the box in the header ticks or clears them all.</li>
+<li><strong>Package feeds:</strong> the NuGet window&#39;s feed picker searches all enabled feeds or just one. <strong>Manage Feeds</strong> adds, edits, enables, disables and removes package sources, in your user settings or in the solution&#39;s <code>nuget.config</code>, the same way <code>dotnet nuget</code> does.</li>
+<li><strong>Open a solution or project:</strong> <strong>Open…</strong> on the welcome screen and in the File menu now accepts a <code>.sln</code>, <code>.slnx</code> or <code>.csproj</code> as well as a folder. A solution opens its folder with that solution chosen; a project file inside an open solution opens in the editor.</li>
+</ul>
+<p>macOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose <strong>Open</strong>.</p></div>
+    </section>
+  </main>
+
+  <footer>Bayonet 0.1.44 · built from 72c3615 · Apache-2.0 License · Bayonet is an independent project, ported from OpenIDEA, and is not affiliated with JetBrains or Microsoft.</footer>
+
+<script>
+  // Highlight the visitor's system and point the main button at its recommended installer.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+    var os = /Win/i.test(platform + ua) ? "windows" : /Mac|iPhone|iPad/i.test(platform + ua) ? "macos" : /Linux|X11|CrOS/i.test(platform + ua) ? "linux" : null;
+    var card = os && document.getElementById(os);
+    if (!card) return;
+    card.classList.add("mine");
+    var pick = card.querySelector(".dl.primary") || card.querySelector(".dl");
+    var finish = function (link) {
+      var cta = document.getElementById("cta");
+      cta.href = link.getAttribute("href");
+      cta.setAttribute("download", "");
+      cta.firstChild.textContent = "Download for " + card.querySelector("h3").textContent + " ";
+      var meta = link.querySelector(".meta").textContent.split(" · ");
+      document.getElementById("cta-sub").textContent = link.querySelector(".name").textContent + " · " + meta[meta.length - 1];
+    };
+    // Apple Silicon vs Intel: ask the browser when it can tell, otherwise assume Apple Silicon.
+    if (os === "macos" && navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+      navigator.userAgentData.getHighEntropyValues(["architecture"]).then(function (v) {
+        finish(card.querySelector('.dl[data-arch="' + (v.architecture === "x86" ? "x86" : "arm") + '"]') || pick);
+      }).catch(function () { finish(pick); });
+    } else {
+      finish(pick);
+    }
+  })();
+</script>
+</body>
+</html>

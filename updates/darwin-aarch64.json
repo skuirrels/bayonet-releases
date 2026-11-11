@@ -1,0 +1,15 @@
+{
+  "version": "0.1.44",
+  "notes": "- **Update many NuGet packages at once:** after **Check for Updates**, the NuGet window shows **Update All** with the number of packages that have updates. Tick the ones you want to see **Update Selected** instead; the box in the header ticks or clears them all.\n- **Package feeds:** the NuGet window's feed picker searches all enabled feeds or just one. **Manage Feeds** adds, edits, enables, disables and removes package sources, in your user settings or in the solution's `nuget.config`, the same way `dotnet nuget` does.\n- **Open a solution or project:** **Open…** on the welcome screen and in the File menu now accepts a `.sln`, `.slnx` or `.csproj` as well as a folder. A solution opens its folder with that solution chosen; a project file inside an open solution opens in the editor.\n\nmacOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose **Open**.",
+  "pub_date": "2026-11-11T20:07:06Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0RFcVFIbXk4NjBqUHBZdGg5NUNsTzBLUmZlMHdmTnV0WU0wQTBVQ3FBaVVPcUwzelQrR1hzM3lDRjVhSlQ2VUw0L2VyZlBFbFJER0hBaHBqOG9uZ3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDI2NzUxCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ0CktSd3duTXdDSkRWcEU4N3hVNWsweUhQMVUvSnRqY1NXWU9tU0J4MWREOVRndzd1cEZWOGM3Z3dCWGN2NWRsbTcrcnRGWDNRaEpRdkZVbmhpdU9RNUNBPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-AppleSilicon.app.tar.gz"
+    },
+    "darwin-aarch64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0RFcVFIbXk4NjBqUHBZdGg5NUNsTzBLUmZlMHdmTnV0WU0wQTBVQ3FBaVVPcUwzelQrR1hzM3lDRjVhSlQ2VUw0L2VyZlBFbFJER0hBaHBqOG9uZ3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDI2NzUxCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ0CktSd3duTXdDSkRWcEU4N3hVNWsweUhQMVUvSnRqY1NXWU9tU0J4MWREOVRndzd1cEZWOGM3Z3dCWGN2NWRsbTcrcnRGWDNRaEpRdkZVbmhpdU9RNUNBPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-AppleSilicon.app.tar.gz"
+    }
+  }
+}

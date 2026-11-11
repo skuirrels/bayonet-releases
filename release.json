@@ -1,0 +1,12 @@
+{
+  "name": "Bayonet",
+  "version": "0.1.44",
+  "files": [
+    "Bayonet-Windows-Setup.exe",
+    "Bayonet-Windows.msi",
+    "Bayonet-macOS-AppleSilicon.dmg",
+    "Bayonet-macOS-Intel.dmg",
+    "Bayonet-Linux-amd64.deb",
+    "Bayonet-Linux-x86_64.rpm"
+  ]
+}

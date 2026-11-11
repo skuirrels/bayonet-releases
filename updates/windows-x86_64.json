@@ -1,0 +1,19 @@
+{
+  "version": "0.1.43",
+  "notes": "- **.NET 11:** Bayonet works with the .NET 11 SDK. The New Project dialog now offers every target framework you have templates for, newest first, so with SDK 11 you can still create a `net10.0` (LTS) project. Before, it offered only the newest one.\n- **Debugging right after a project opens:** starting the debugger, or anything else that needs the language server, no longer fails when the server is restarting at that moment. Java showed this as \"jdtls is not ready (Busy)\", because jdtls restarts once Maven has loaded the project. The request now waits for the restarted server.\n- **Faster start-up:** the File Structure popup, the Run console in Services and the external Git log now load when first used instead of at start-up.\n\nmacOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose **Open**.",
+  "pub_date": "2026-11-10T21:36:30Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0JVV1FvZERhbHlSbXBZR0V3SjZlWlJPbWp1eE5Od0JubE5yT1g3Vzk3WHJ1QVN4V0V6QnllVTNvOGpMeEhSTmYwdSszTVRvVE1WaURIeWpaWjlsSlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MzQ0ODI5CWZpbGU6QmF5b25ldF8wLjEuNDNfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMS40Mwp1L3hkTk4zT256VXF5MUd6cFlNRmlwbnI4bGQ0R2Z2bE1RQXkvVEl3cHNiaWUzbGVLS05Ba3lEOFhIUXh2dzVvb2ZJejhselA0TmNDeFlpckRrY0JEdz09Cg==",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-Windows-Setup.exe"
+    },
+    "windows-x86_64-nsis": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0JVV1FvZERhbHlSbXBZR0V3SjZlWlJPbWp1eE5Od0JubE5yT1g3Vzk3WHJ1QVN4V0V6QnllVTNvOGpMeEhSTmYwdSszTVRvVE1WaURIeWpaWjlsSlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MzQ0ODI5CWZpbGU6QmF5b25ldF8wLjEuNDNfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMS40Mwp1L3hkTk4zT256VXF5MUd6cFlNRmlwbnI4bGQ0R2Z2bE1RQXkvVEl3cHNiaWUzbGVLS05Ba3lEOFhIUXh2dzVvb2ZJejhselA0TmNDeFlpckRrY0JEdz09Cg==",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-Windows-Setup.exe"
+    },
+    "windows-x86_64-msi": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0x0eW1xV3dtblljeUZvTmlweUxzeEdKeXExYm1za3dRSGVZck5wcFUzQmpOOXlGdG9wT3Vjd2R2ZlRDYjE0Ui9iOEw5dTYzWkRneGlxZ1IrdVFvcXdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MzQ0ODI5CWZpbGU6QmF5b25ldF8wLjEuNDNfeDY0X2VuLVVTLm1zaQl2ZXJzaW9uOjAuMS40MwpoOW1TdTZVb3VnT2o3L0h2RzNGT0Vxci9iSTExNnRMdGdHSDZDUkhYaVJtNktIWExmN0VNdGY5OGpueXFZdVRuZmtkdVlLTDFSY054cWZ6VEozazlEQT09Cg==",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-Windows.msi"
+    }
+  }
+}
