@@ -1,0 +1,23 @@
+{
+  "version": "0.1.47",
+  "notes": "- **Python interpreter status:** in a project whose only Python is loose scripts, such as a .NET repository's tooling scripts, the interpreter item and its **No interpreter** warning now show only while a Python file is the active tab. Projects with Python project files (`pyproject.toml`, `requirements.txt` and so on) or a configured interpreter still show it everywhere.\n\nmacOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose **Open**.",
+  "pub_date": "2026-11-15T13:33:41Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0hmdjRoQzN3VmRPNFIyVUlob3h2QWZNR2xzZkg4N2M0RUg1a0d5cTBZaU10Z25ldnJkaFhrWEFzQWlrZG9jaXVxamI4SlU4ZjhBWFNvZ3RQOGFyN0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzQ4NzgxCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ3ClRPRHBlcE43KzRCNjVXL011SzY0QWNXUE5oRUxEWHVMQ3VGNHJ6Qml0WDZyOU9UbW5nLzN6bXlnSS9YeEllbGdUZkFaYlRqRkFqai9iZis1M0t6YkR3PT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-AppleSilicon.app.tar.gz"
+    },
+    "darwin-aarch64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0hmdjRoQzN3VmRPNFIyVUlob3h2QWZNR2xzZkg4N2M0RUg1a0d5cTBZaU10Z25ldnJkaFhrWEFzQWlrZG9jaXVxamI4SlU4ZjhBWFNvZ3RQOGFyN0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzQ4NzgxCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ3ClRPRHBlcE43KzRCNjVXL011SzY0QWNXUE5oRUxEWHVMQ3VGNHJ6Qml0WDZyOU9UbW5nLzN6bXlnSS9YeEllbGdUZkFaYlRqRkFqai9iZis1M0t6YkR3PT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-AppleSilicon.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0dMUWY3YTQ0QUFPKzNNZHZDNmZqNld2TFhqRWZwQ2ZFeG5yWUY5ZjV6aGtwK0lzSFRXM2JCVUVwREoyZ0JTRkF0Ymh6TmIwNkNQMlN4YTI2TnVJTkFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzQ5NTczCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ3CnNBWkE2djdnbkdheC9BeWFyeVF4bXpXM0FibUVmdDRQVjNidXd3Vm8yQ2ZDRmtIeXkwT1JlZ0xiVC9mZ0tnbnVxVGk0aGQ5YnlUa054QnYzUHhEVEJRPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-Intel.app.tar.gz"
+    },
+    "darwin-x86_64-app": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0dMUWY3YTQ0QUFPKzNNZHZDNmZqNld2TFhqRWZwQ2ZFeG5yWUY5ZjV6aGtwK0lzSFRXM2JCVUVwREoyZ0JTRkF0Ymh6TmIwNkNQMlN4YTI2TnVJTkFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzQ5NTczCWZpbGU6QmF5b25ldC5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQ3CnNBWkE2djdnbkdheC9BeWFyeVF4bXpXM0FibUVmdDRQVjNidXd3Vm8yQ2ZDRmtIeXkwT1JlZ0xiVC9mZ0tnbnVxVGk0aGQ5YnlUa054QnYzUHhEVEJRPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-macOS-Intel.app.tar.gz"
+    }
+  }
+}

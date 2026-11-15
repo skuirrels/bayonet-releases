@@ -1,0 +1,15 @@
+{
+  "version": "0.1.43",
+  "notes": "- **.NET 11:** Bayonet works with the .NET 11 SDK. The New Project dialog now offers every target framework you have templates for, newest first, so with SDK 11 you can still create a `net10.0` (LTS) project. Before, it offered only the newest one.\n- **Debugging right after a project opens:** starting the debugger, or anything else that needs the language server, no longer fails when the server is restarting at that moment. Java showed this as \"jdtls is not ready (Busy)\", because jdtls restarts once Maven has loaded the project. The request now waits for the restarted server.\n- **Faster start-up:** the File Structure popup, the Run console in Services and the external Git log now load when first used instead of at start-up.\n\nmacOS builds are not notarised yet: the first time, right-click Bayonet in Applications and choose **Open**.",
+  "pub_date": "2026-11-10T21:36:30Z",
+  "platforms": {
+    "linux-x86_64-rpm": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0hPLzNKMXR6UE1sOWp3bXFnZjJ6SjUzZnRRM3FiRnZvWHBMWnpMNDRKcEpmZ0wvTzFUWGl0WVhHZ0RySmpwNjh6S3R5M0toS1BNZS82YVU1ZEZTakE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MzQ2NTYwCWZpbGU6QmF5b25ldC0wLjEuNDMtMS54ODZfNjQucnBtCXZlcnNpb246MC4xLjQzCjBIS3pQTTZnQ1EyRmVzd2IrNGlIb2xsYWd3dDBzbjJkWlBsZkxXd252MEo0aWd4cDZEN0Nua1ZhckRWL2ZTRjBCVVRYK1RMTis5a0duZUptN01XY0F3PT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-Linux-x86_64.rpm"
+    },
+    "linux-x86_64-deb": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRaTlsU0hFSkFRV0h1eFhFTkovOWdHZ0JlMFJVN01OcGNVK1F1c1MydmU1SW1iUmc4VmhvTC9IMVc2ZTM2U3BVUVM1SlBXUnVJb1ZjczRKTklXcytJcG5OV1V5L0dLZWdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MzQ2NTYwCWZpbGU6QmF5b25ldF8wLjEuNDNfYW1kNjQuZGViCXZlcnNpb246MC4xLjQzCmZjN05PS0hqWThmUlhkVXcvdkQ1Ti9PSTdaT1hYQ29IQVZ4KzNPSS9oa1lwN1VndVBoVDMzS24rVjk1cXNpOEd2NkIvWUZpc2pVekZ1ZmM2MG42cUFBPT0K",
+      "url": "https://skuirrels.github.io/bayonet-releases/Bayonet-Linux-amd64.deb"
+    }
+  }
+}
